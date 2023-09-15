@@ -1,0 +1,182 @@
+:root {
+    --body-background: #EEEFF1;
+    --primary-color: #006B65;
+    --secundary-color: #03847C;
+    --complementary-color: #310098;
+    --complementary-color2: #F5C443;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--body-background);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#content {
+    text-align: center;
+    width: 100%!important;
+    background-color: var(--body-background);
+}
+
+#header {
+    min-width: 100%;
+    display: flex;
+    background-color: var(--primary-color);
+    height: 8rem;
+    align-items: center;
+}
+
+#logo {
+    width: 23em;
+    display: flex;
+    justify-content: start;
+    margin-left: 2em;
+    margin-right: 1em;
+}
+
+#logo img{
+    max-width: 100%;
+    height: auto;
+}
+
+#main-title {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 8rem;
+    margin: auto;
+}
+
+#main-title p {
+    text-align: justify;
+    color: var(--secundary-color);
+    margin: 0;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.card-container {
+    margin:2em auto;
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 130px;
+    color: #FFFFFF;
+}
+  
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Each card takes equal space */
+    height: 530px;
+    border-radius: 30px;
+    box-sizing: border-box; /* Include padding in the width calculation */
+    align-items: center;
+    
+}
+
+#card-curso {
+    background:
+        linear-gradient(rgba(0,107,101,0.5),rgba(49,0,152,.5)),
+        url(images/library.jpg);
+        background-repeat: none;
+        background-size: cover;
+        background-position: center;
+}
+
+#card-moodle {
+    background:
+        linear-gradient(rgba(0,107,101,0.5),rgba(49,0,152,.5)),
+        url(images/lady-study.jpg);
+        background-repeat: none;
+        background-size: cover;
+        background-position: center;
+}
+
+.div-text-card {
+    display: flex;
+    align-items: center;
+    height: 60%;
+    max-width: 350px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.btn-card {
+    width: 200px;
+    height: 80px; 
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+    border: none;
+    border-radius: 30px;
+    color: var(--complementary-color);
+}
+
+#footer {
+    margin-top: 2em;
+}
+
+#yellow-line {
+    background-color: var(--complementary-color2);
+    height: 24px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#bg-primary {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: var(--primary-color);
+    height: 60px;
+    font-size: 30px;
+}
+
+#bg-primary p {
+    margin: 0;
+    padding: 0 2em 0 1em;
+}
+
+@media only screen and (max-width: 1300px) {
+
+    #main-title p {
+        font-size: 3vmax;
+    }
+ 
+ }
+
+ @media only screen and (max-width: 1100px) {
+    .card p {
+        font-size: 30px;
+    }
+ }
+
+ @media (max-width: 768px) {
+    .card {
+      min-width: 100%; /* Cards take full width on smaller screens */
+    }
+}
+
+ @media only screen and (max-width: 700px) {
+
+    #main-title {
+        height: 10rem;
+        max-width: 70%;
+    }
+
+    #main-title p {
+        font-size: 1.5em;
+    }
+ 
+ }
+
+ @media only screen and (max-width: 435px) {
+    #bg-primary {
+        font-size: 20px;
+    }
+ }
