@@ -1,182 +1,147 @@
-:root {
-    --body-background: #EEEFF1;
-    --primary-color: #006B65;
-    --secundary-color: #03847C;
-    --complementary-color: #310098;
-    --complementary-color2: #F5C443;
-}
-
 body {
-    min-height: 100vh;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--body-background);
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: white;
 }
 
 #content {
-    text-align: center;
-    width: 100%!important;
-    background-color: var(--body-background);
-}
-
-#header {
-    min-width: 100%;
     display: flex;
-    background-color: var(--primary-color);
-    height: 8rem;
-    align-items: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/images/bg_ava.jpg');
 }
 
-#logo {
-    width: 23em;
-    display: flex;
-    justify-content: start;
-    margin-left: 2em;
-    margin-right: 1em;
+#introduction {
+    padding-top: 10em;
+    padding-left: 7em;
+    padding-bottom: 1em;
+    display: inherit;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 60%;
+    text-align: start;
 }
 
-#logo img{
-    max-width: 100%;
+#introduction h1 {
+    text-align: start;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-weight: 400;
+    font-size: 4.5em;
+}
+
+#introduction h1 span {
+    font-weight: 900;
+}
+
+#introduction img {
+    align-self: center;
     height: auto;
+    width: 43vw;
 }
 
-#main-title {
+#introduction p {
+    font-size: 1.2em;
+}
+
+#introduction p span {
+    font-weight: 900;
+}
+
+#card-area {
+    min-width: 40%;
     max-width: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 8rem;
-    margin: auto;
-}
-
-#main-title p {
-    text-align: justify;
-    color: var(--secundary-color);
-    margin: 0;
-    font-size: 2vw;
-    font-weight: bold;
-}
-
-.card-container {
-    margin:2em auto;
-    max-width: 80%;
-    display: flex;
     flex-wrap: wrap;
-    gap: 130px;
-    color: #FFFFFF;
+    align-content: center;
+    justify-content: space-evenly;
 }
-  
-.card {
+
+#courses {
+    background-image: url('/images/card_a.jpg');
+}
+
+#moodle {
+    background-image: url('/images/card_b.jpg');
+}
+
+#base {
+    background-image: url('/images/card_c.jpg');
+}
+
+.cards {
+    padding: 1em;
     display: flex;
     flex-direction: column;
-    flex: 1; /* Each card takes equal space */
-    height: 530px;
-    border-radius: 30px;
-    box-sizing: border-box; /* Include padding in the width calculation */
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    min-width: calc(80% - 1em);
+    max-width: calc(80% - 1em);
+    min-height: calc(30% - 1em);
+    max-height: calc(30% - 1em);
     
 }
 
-#card-curso {
-    background:
-        linear-gradient(rgba(0,107,101,0.5),rgba(49,0,152,.5)),
-        url(images/library.jpg);
-        background-repeat: none;
-        background-size: cover;
-        background-position: center;
-}
-
-#card-moodle {
-    background:
-        linear-gradient(rgba(0,107,101,0.5),rgba(49,0,152,.5)),
-        url(images/lady-study.jpg);
-        background-repeat: none;
-        background-size: cover;
-        background-position: center;
-}
-
-.div-text-card {
-    display: flex;
-    align-items: center;
-    height: 60%;
-    max-width: 350px;
-    font-size: 40px;
-    text-align: center;
-}
-
-.btn-card {
-    width: 200px;
-    height: 80px; 
-    font-size: 35px;
-    font-weight: bold;
-    font-family: 'Roboto Condensed', sans-serif;
-    border: none;
-    border-radius: 30px;
-    color: var(--complementary-color);
-}
-
-#footer {
-    margin-top: 2em;
-}
-
-#yellow-line {
-    background-color: var(--complementary-color2);
-    height: 24px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-#bg-primary {
-    display: flex;
-    align-items: center;
-    color: #FFFFFF;
-    background-color: var(--primary-color);
-    height: 60px;
-    font-size: 30px;
-}
-
-#bg-primary p {
+.card-title {
     margin: 0;
-    padding: 0 2em 0 1em;
+    font-size: 2.3em;
+    font-weight: 900;
 }
 
-@media only screen and (max-width: 1300px) {
+.card-text {
+    margin: 1% 0 2% 0;
+    max-width: 70%;
+    font-size: 1.5em;
 
-    #main-title p {
-        font-size: 3vmax;
-    }
- 
- }
-
- @media only screen and (max-width: 1100px) {
-    .card p {
-        font-size: 30px;
-    }
- }
-
- @media (max-width: 768px) {
-    .card {
-      min-width: 100%; /* Cards take full width on smaller screens */
-    }
 }
 
- @media only screen and (max-width: 700px) {
+.card-btn {
+    display: inline-block;
+    padding: 3px 8px;
+    color: #005232;
+    background-color: #ffb800;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 1.5rem;
+    align-self: flex-end;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s linear;
+}
 
-    #main-title {
-        height: 10rem;
-        max-width: 70%;
+.card-btn:hover {
+    transform: translate(3px, -2px);
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        height: 100%;
     }
 
-    #main-title p {
-        font-size: 1.5em;
+    #content {
+        height: inherit;
+        flex-direction: column;
     }
- 
- }
 
- @media only screen and (max-width: 435px) {
-    #bg-primary {
-        font-size: 20px;
+    #introduction {
+        padding: 0;
+        max-width: 100%;
     }
+
+    #introduction h1{
+    }
+
+    #card-area {
+        min-height: 100vh;
+        max-width: 100%;
+    }
+
  }

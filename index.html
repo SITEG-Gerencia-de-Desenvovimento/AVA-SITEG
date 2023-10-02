@@ -4,57 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVA | SITEG</title>
+    <link rel="icon" href="icons/canedo-favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap">
-    <link rel="icon" href="icons/favicon-canedo.png" type="image/png">
 </head>
 <body>
     <div id="content">
-        <div id="header">
-            <div id="logo">
-                <img src="images/senador.png" alt="">
-            </div>
+        <div id="introduction">
+            <h1>Aprenda com nosso <span>Ambiente Virtual de Aprendizagem</span>
+                 para criarmos um futuro melhor!
+            </h1>
+            <img src="/images/pref_siteg_white.jpeg" alt="">
+            <p><span>SITEG |</span> Diretoria Geral de Software e Inovação</p>
         </div>
-        <div id="main-title">
-            <p>Aprenda com nosso Ambiente Virtual de Aprendizagem para criarmos um futuro melhor!</p>
-        </div>
-        <div class="card-container">
-            <div id="card-curso" class="card">
-                <div class="div-text-card">
-                    <p>
-                        Veja um dos nossos <b>Cursos Livres</b> e aprenda algo novo já!
-                    </p>
-                </div>
-                <div class="div-btn-card">
-                    <a href="https://ava.senadorcanedo.go.gov.br/cursos">
-                        <button class="btn-card">
-                            Vamos lá!
-                        </button>
-                    </a>
-                </div>
+        <div id="card-area">
+            <div class="cards" id="courses">
+                <p class="card-title">CURSOS ONLINE</p>
+                <p class="card-text">Plataforma online com vídeos sobre boas práticas e uso de sistemas da prefeitura.</p>
+                <button class="card-btn" id="courses-redirect">
+                    ACESSE AGORA!
+                </button>
             </div>
-            <div id="card-moodle" class="card">
-                <div class="div-text-card">
-                    <p>
-                        Explore a plataforma <b>Moodle</b> e encontre o melhor curso pra você!
-                    </p>
-                </div>
-                <div class="div-btn-card">
-                    <a href="https://ava.senadorcanedo.go.gov.br/cursos">
-                        <button class="btn-card">
-                            Vamos lá!
-                        </button>
-                    </a>
-                </div>
+            <div class="cards" id="moodle">
+                <p class="card-title">MOODLE</p>
+                <p class="card-text">Plataforma online com vídeos sobre boas práticas e uso de sistemas da prefeitura.</p>
+                <button class="card-btn" id="moodle-redirect">
+                    ACESSE AGORA!
+                </button>
             </div>
-        </div>
-        <div id="footer">
-            <div id="yellow-line">
-            </div>
-            <div id="bg-primary">
-                <p>SITEG | Diretoria de Software</p>
+            <div class="cards" id="base">
+                <p class="card-title">BASE DE CONHECIMENTO</p>
+                <p class="card-text">Plataforma online com vídeos sobre boas práticas e uso de sistemas da prefeitura.</p>
+                <button class="card-btn" id="base-redirect">
+                    ACESSE AGORA!
+                </button>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
