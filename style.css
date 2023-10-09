@@ -13,22 +13,25 @@ body {
 }
 
 #introduction {
-    padding-top: 10em;
-    padding-left: 7em;
-    padding-bottom: 1em;
+    margin-top: 10em;
+    margin-left: 2em;
+    margin-bottom: 1em;
     display: inherit;
     flex-direction: column;
     justify-content: space-between;
     max-width: 60%;
     text-align: start;
+    text-align: center;
 }
 
 #introduction h1 {
+    padding-left: 2em;
     text-align: start;
     margin-block-start: 0;
     margin-block-end: 0;
     font-weight: 400;
-    font-size: 4.5em;
+    font-size: 4em;
+    user-select: none;
 }
 
 #introduction h1 span {
@@ -38,23 +41,24 @@ body {
 #introduction img {
     align-self: center;
     height: auto;
-    width: 43vw;
+    width: 75%;
 }
 
-#introduction p {
+#footer-text {
     font-size: 1.2em;
 }
 
-#introduction p span {
+#footer-text span {
     font-weight: 900;
 }
 
 #card-area {
+    margin: 5em 0;
     min-width: 40%;
     max-width: 40%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    align-items: center;
     align-content: center;
     justify-content: space-evenly;
 }
@@ -83,21 +87,23 @@ body {
     border-radius: 15px;
     min-width: calc(80% - 1em);
     max-width: calc(80% - 1em);
-    min-height: calc(30% - 1em);
+    min-height: calc(25% - 1em);
     max-height: calc(30% - 1em);
     
 }
 
 .card-title {
     margin: 0;
-    font-size: 2.3em;
+    font-size: 4vh;
     font-weight: 900;
+    user-select: none;
 }
 
 .card-text {
+    user-select: none;
     margin: 1% 0 2% 0;
     max-width: 70%;
-    font-size: 1.5em;
+    font-size: 2.6vh;
 
 }
 
@@ -115,11 +121,35 @@ body {
     overflow: hidden;
     position: relative;
     transition: transform 0.2s linear;
+    flex-shrink: 0;
 }
 
 .card-btn:hover {
     transform: translate(3px, -2px);
 }
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 1415px) {
+    .card-title {
+        font-size: 3.5vh;
+    }
+
+    .card-text {
+        font-size: 1.8vh;
+    }
+    
+    #introduction h1 {
+        font-size: 3.5em;
+    }
+
+    #introduction img {
+        width: 100%;
+    }
+}
+
 
 @media only screen and (max-width: 900px) {
     body {
@@ -132,16 +162,64 @@ body {
     }
 
     #introduction {
-        padding: 0;
+        margin: 0;
         max-width: 100%;
+        align-items: center;
     }
 
     #introduction h1{
+        padding: 2em 0 2em 0;
+        text-align: center;
+        max-width: 80%;
+    }
+
+    #introduction img {
+        padding: 0;
+        width: 80vw;
+        margin-bottom: 4em;
     }
 
     #card-area {
         min-height: 100vh;
         max-width: 100%;
+        align-items: center;
+    }
+    
+    .cards {
+        min-height: 13em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #introduction h1 {
+        font-size: 2.5em;
     }
 
- }
+    #introduction img {
+        padding: 0 1em;
+        width: 90vw;
+    }
+}
+
+@media only screen and (max-width: 446px) {
+    #introduction h1 {
+        font-size: 2em;
+    }
+
+    #footer-text {
+        font-size: .9em;
+        margin-bottom: 0;
+    }
+
+    .card-title {
+        font-size: 1.5em;
+    }
+
+    .card-text {
+        font-size: 1em;
+    }
+
+    .card-btn {
+        font-size: 1.em;
+    }
+}
